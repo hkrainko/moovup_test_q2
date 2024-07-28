@@ -1,8 +1,8 @@
 import 'package:moovup_test/data/extensions/location_json.dart';
 import 'package:moovup_test/data/extensions/name_json.dart';
-import 'package:moovup_test/domain/entities/user.dart';
+import 'package:moovup_test/domain/entities/person.dart';
 
-extension UserJson on User {
+extension UserJson on Person {
   Map<String, dynamic> toJson() {
     return {
       '_id': id,
@@ -13,8 +13,8 @@ extension UserJson on User {
     };
   }
 
-  static User fromJson(Map<String, dynamic> json) {
-    return User(
+  static Person fromJson(Map<String, dynamic> json) {
+    return Person(
       id: json['_id'],
       name: NameJson.fromJson(json['name']),
       email: json['email'],

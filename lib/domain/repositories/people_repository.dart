@@ -1,5 +1,6 @@
-import 'package:moovup_test/domain/entities/user.dart';
+import 'package:moovup_test/domain/entities/person.dart';
 
 abstract class PeopleRepository {
-  Future<List<User>> getPeople();
+  Stream<List<Person>> get peopleBoardcast;
+  void refresh();
 }
